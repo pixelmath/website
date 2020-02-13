@@ -18,9 +18,10 @@
     <link rel="stylesheet" href="css/animate.css">
     <!-- Bootstrap CSS File -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
+   
     <!-- Main Stylesheet File -->
     <link href="css/style.css" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -28,21 +29,29 @@
     <div id="header">
         <div class="container">
             <div class="row">
+                <div class = "col-md-10">
+                <h3>
+                    <img src="img/logo.png" width="90px" height="auto"/><span>PixelMath</span>
+                </h3>
+                <br><br>
+                </div>
+                
+            
                 <div class="col-md-6 d-flex justify-content-center wow zoomIn">
                     <img src="img/app-cell2.png" class="img-fluid">
                 </div>
                 <div class="col-md-6 d-flex flex-wrap align-content-center mt-5 mt-sm-0 wow zoomIn">
-                    <h3>
-                        <img src="img/logo.png" width="90px" height="auto"/><span>PixelMath</span>
-                        <br><br>
-                        Make maths practice as fun and addictive as Games
-                    </h3>
+                    <br><br>
+                    <h4>Make maths practice as fun and addictive as Games</h4>
+                   
                     <div class="col-md-10 px-0 pt-3">
                         <form role="form" action="" method="post" enctype="plain">
-                            <input type="tel" name="tel" maxLength="10" pattern="\d{10}" class="subscribe-input mobile" placeholder="Enter Phone Number" required>
+                            <input type="tel" name="tel"  maxLength="10" class="subscribe-input mobile" placeholder="Enter Phone Number"  required>
                             <button class='btn btn-green2 subscribe-submit' type="submit">Free 7 day Trial</button>
                         </form>
                     </div>
+                    
+
                     <p class="mt">
                         <button class="btn btn-lg btn-trans">
                             <i class="fab fa-apple"></i>
@@ -64,38 +73,39 @@
     <div class="container my-5 pb-5 features">
         <div class="row text-center">
             <div class="col-md-4 mt  wow slideInUp">
-                <img src="img/ico-02.png" alt="">
-                <h4>GOOD DESIGN</h4>
+                <img src="img/positive.png" alt="">
+                <h4>POSITIVE PSYCHOLOGY</h4>
                 <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when a printer took a galley.</p>
             </div>
             <div class="col-md-4 mt  wow slideInUp">
-                <img src="img/ico-01.png" alt="">
-                <h4>WELL PROTECTED</h4>
+                <img src="img/machinelearning.png" alt="">
+                <h4>MACHINE LEARNING</h4>
                 <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when a printer took a galley.</p>
             </div>
             <div class="col-md-4 mt  wow slideInUp">
-                <img src="img/ico-03.png" alt="">
-                <h4>HIGH CLASS</h4>
+                <img src="img/leaderboard.png" alt="">
+                <h4>LEADERBOARD</h4>
                 <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when a printer took a galley.</p>
             </div>
             <div class="col-md-4 mt  wow slideInUp">
-                <img src="img/ico-04.png" alt="">
-                <h4>RESPONSIVE</h4>
+                <img src="img/dataanalytics.png" alt="">
+                <h4>DATA ANALYTICS</h4>
                 <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when a printer took a galley.</p>
             </div>
             <div class="col-md-4 mt  wow slideInUp">
-                <img src="img/ico-05.png" alt="">
-                <h4>FREE SUPPORT</h4>
+                <img src="img/gamedesign.png" alt="">
+                <h4>GAME DESIGN</h4>
                 <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when a printer took a galley.</p>
             </div>
             <div class="col-md-4 mt  wow slideInUp">
-                <img src="img/ico-06.png" alt="">
-                <h4>AFFORDABLE</h4>
+                <img src="img/learningscience.png" alt="">
+                <h4>LEARNING SCIENCE</h4>
                 <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when a printer took a galley.</p>
             </div>
         </div>
         <!--/row -->
     </div>
+    
     <!--/container -->
 
     <div id="footer" class="wow slideInUp">
@@ -135,9 +145,10 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#!">Blog</a>
                             </li>
-                        </ul>
+                        </ul></h5></h5>
                     </nav>
                 </div>
+                <p style="font-size: large; font-weight: bold ;">&copy; 2019 PixelMath</p>
             </div>
         </div>
     </div>
@@ -146,6 +157,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="js/wow.js"></script>
+    <script>
+        $("input").intlTelInput({
+  utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/js/utils.js"
+});
+    </script>
     <script>
         new WOW().init();
 

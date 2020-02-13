@@ -15,12 +15,21 @@
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700,900" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
 
+    <!--connecting to firebase-->
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-firestore.js"></script>
+
+
+
     <link rel="stylesheet" href="css/animate.css">
     <!-- Bootstrap CSS File -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
     <!-- Main Stylesheet File -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
 </head>
 
@@ -36,7 +45,6 @@
                 <br><br>
                 </div>
 
-
                 <div class="col-md-6 d-flex justify-content-center wow zoomIn">
                     <img src="img/app-cell2.png" class="img-fluid">
                 </div>
@@ -45,12 +53,11 @@
                     <h4>Make maths practice as fun and addictive as Games</h4>
 
                     <div class="col-md-10 px-0 pt-3">
-                        <form role="form" action="" method="post" enctype="plain" id ="contactForm">
-                            <input id ="telNumber" type="tel" name="tel"  value ="+91 - " maxLength="16" class="subscribe-input mobile" placeholder="Enter Phone Number"  required>
+                        <form role="form" action="#" method="post" enctype="plain" id ="contactForm">
+                            <input id ="telNumber" type="tel" name="tel"  value ="+91-" maxLength="16" class="subscribe-input mobile" placeholder="Enter Phone Number"  required>
                             <button class='btn btn-green2 subscribe-submit' type="submit" id = "submit">Free 7 day Trial</button>
                         </form>
                     </div>
-
 
                     <p class="mt">
                         <button class="btn btn-lg btn-trans">
@@ -148,33 +155,10 @@
                         </ul></h5></h5>
                     </nav>
                 </div>
-                <p style="font-size: large; font-weight: bold ;">&copy; 2019 PixelMath</p>
+                <p style="font-size:large; font-weight: bold;">&copy; 2019 PixelMath</p>
             </div>
         </div>
     </div>
-
-     <!--connecting to firebase-->
-     <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
-     <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-firestore.js"></script>
-     
-     <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-          apiKey: "AIzaSyAp6LDqQa7iO2JQzVfQ1b3lzFvJFOty2b4",
-          authDomain: "customer-contacts-77b23.firebaseapp.com",
-          databaseURL: "https://customer-contacts-77b23.firebaseio.com",
-          projectId: "customer-contacts-77b23",
-          storageBucket: "customer-contacts-77b23.appspot.com",
-          messagingSenderId: "235336606950",
-          appId: "1:235336606950:web:39a130fc75a0153a0bc727",
-          measurementId: "G-21QD7Q13HD"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        const db = firebase.firestore()
-      </script>
-
-     <script src="main.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -190,11 +174,14 @@
     <script>
         $(function() {
             $.samaskHtml();
-            $('.mobile').samask("0000000000000000");
+            $('.mobile').samask("00000000000000");
         });
 
     </script>
-   
+
+    <!-- Save the contact details -->
+    <script src="js/saveContact.js"></script>
+
 </body>
 
 </html>

@@ -26,7 +26,7 @@ function submitForm(e){
     }
     else{
       Swal.fire({
-        title: "<i>Please enter your conatct number</i>",
+        title: "Please enter your contact number",
         html: " So that we can set up your free trail.</b>",
         confirmButtonText: "Thank you",
       }).then((result) => {
@@ -44,7 +44,7 @@ function saveNumber(telNumber){
     })
 
     Swal.fire({
-      title: "<i>You have been register for free trail.</i>",
+      title: "You have registered for free trail.",
       html: "Our team will get back to you soon</b>",
       confirmButtonText: "Thank you",
     }).then((result) => {

@@ -17,6 +17,12 @@ body {
     color: #444;
 }
 
+.navbar {
+      min-height: 90px;
+      border-radius: 0;
+      background-color:'red';
+    }
+
 h1,
 h2,
 h3,
@@ -26,6 +32,8 @@ h6 {
     font-family: 'Comfortaa', Helvetica, Arial;
     font-weight: 700;
 }
+
+
 
 p {
     padding: 0;

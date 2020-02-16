@@ -23,11 +23,29 @@ body {
       background-color:'red';
     }
 
-h1,
-h2,
-h3,
-h4,
-h5,
+h1 {
+    font-family: 'Comfortaa', Helvetica, Arial;
+    font-weight: 700;
+}
+h2 {
+    font-family: 'Comfortaa', Helvetica, Arial;
+    font-weight: 700;
+}
+h3 {
+    font-family: 'Comfortaa', Helvetica, Arial;
+    font-weight: 700;
+    padding-left:10px ;
+}
+h4 {
+    font-family: 'Comfortaa', Helvetica, Arial;
+    font-weight: 700;
+}
+h5 {
+    font-family: 'Comfortaa', Helvetica, Arial;
+    font-weight: 700;
+    padding-left: 20px;
+    margin-top: 20px;
+}
 h6 {
     font-family: 'Comfortaa', Helvetica, Arial;
     font-weight: 700;
@@ -51,9 +69,17 @@ body {
     height: 100%;
 }
 
-.mt {
-    margin-top: 50px;
-}
+@media only screen and (min-width: 600px) {
+    /* For mobile: */
+    .mt {
+        margin-top: 50px;
+        flex-direction: row;
+    }
+    #footer .fab {
+        font-size: 20px;
+    }
+  }
+
 
 .clear {
     clear: both;
@@ -107,10 +133,11 @@ a:focus {
 
 #header {
     background: #eaf8fe;
-    padding-top: 80px;
+    padding-top: 40px;
     padding-bottom: 80px;
     margin-bottom: 50px;
     color: #000;
+    align-items: center;
 }
 
 #header h3 {
@@ -118,6 +145,7 @@ a:focus {
     color: #444;
     font-size: 36px;
     line-height: 48px;
+    align-items: center;
 }
 
 #header h3 span {
@@ -178,9 +206,7 @@ a:focus {
     padding-bottom: 20px;
 }
 
-#footer .fab {
-    font-size: 20px;
-}
+
 
 
 
@@ -212,4 +238,9 @@ a:focus {
 .flag {
  height: 11px;
  width: 16px;
+}
+
+.mdi-36px {
+    font-size: 39px;
+    margin-right: 10px
 }

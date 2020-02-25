@@ -19,12 +19,12 @@
     <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-firestore.js"></script>
 
-    
+
     <link rel="stylesheet" href="css/animate.css">
     <!-- Bootstrap CSS File -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
-    
+
 
     <!-- Sweet Alert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
@@ -44,14 +44,13 @@
     <div id="header">
         <div class="container">
             <div class="row">
-                
-                <div class="col-md-6 d-flex flex-wrap align-content-center mt-5 mt-sm-0 wow zoomIn">
-                    <br><br>
+                <div class="col-md-6 d-flex flex-wrap align-content-center mt-5 mt-sm-0 wow zoomIn" style="padding:10px;">
                     <h3>
                         <img src="img/logo.png" width="80px" height="auto"/>
                         <span>PixelMath</span>
-
-                        <h5><p>Make maths practice as fun and addictive as Games</p></h5>
+                        <p>
+                          <small>Make maths practice as fun and addictive as Games</small>
+                        </p>
                     </h3>
 
                     <div class="col-md-10 px-0 pt-3">
@@ -60,25 +59,17 @@
                             <button class='btn btn-green2 subscribe-submit' type="submit" id = "submit">Free 7 day Trial</button>
                         </form>
                     </div>
-                    <br><br>
-                    <h3>
-                        <h5><p>Available for grade 1 to 12</p></h5>
-                    </h3>
-                   
-                    <p class="mt">
-                        <button class="btn btn-lg btn-trans">
-                            <i class="fab fa-apple"></i>
-                            App Store
-                        </button>
-                        <button class="btn btn-lg btn-trans">
-                            <i class="fab fa-google-play"></i>
-                            Play Store
-                        </button>
-                    </p>
+                    <div class="col-md-10 px-0 pt-3" style="text-align:center;font-size:25px;margin-top:30px;">
+                      Available for grade 1 to 12
+                    </div>
+                    <div class="col-md-10 px-0 pt-3" style="margin-top:-50px;">
+                      <a id="app-store-badge" href="#" role="button"><img width="45%" src="./img/app-store-badge.png"></a>
+                      <a id="play-store-badge" href="#" role="button"><img width="50%" height="48%" src="./img/google-play-badge.png"></a>
+                    </div>
                 </div>
-             
-                <div class="col-md-6 d-flex justify-content-center wow zoomIn">
-                    <img src="img/app-cell2.png"  width="70%" height= "80%" class="img-fluid">
+
+                <div class="col-md-6 d-flex justify-content-center wow zoomIn" style="padding:10px">
+                    <img src="img/app-cell2.png"  width="65%" height= "80%" class="img-fluid">
                 </div>
 
             </div>
@@ -91,35 +82,35 @@
     <div class="container my-5 pb-5 features">
         <div class="row text-center">
             <div class="col-md-4 mt  wow slideInUp">
-                <img src="img/gamedesign.png" alt="">
+                <img src="img/gamedesign.png" alt="game design image">
                 <h4>GAME DESIGN</h4>
                 <p> Uses elements from game design like - goals, adaptivity, balance and feedback mechanism to make maths practice fun and engaging.</p>
             </div>
             <div class="col-md-4 mt  wow slideInUp">
-                <img src="img/positive.png" alt="">
+                <img src="img/positive.png" alt="positive psychology image">
                 <h4>POSITIVE PSYCHOLOGY</h4>
                 <p>Incorporates elements of autonomy, competence and relatedness from positive psychology to keep players motivated and induce "flow" during maths practice.
                 </p>
             </div>
             <div class="col-md-4 mt  wow slideInUp">
-                <img src="img/learningscience.png" alt="">
+                <img src="img/learningscience.png" alt="learning science image">
                 <h4>LEARNING SCIENCES</h4>
                 <p>Helps students calibrate their efforts during individual practice sessions by boosting their metacognitive abilities.</p>
             </div>
             <div class="col-md-4 mt  wow slideInUp">
-                <img src="img/machinelearning.png" alt="">
+                <img src="img/machinelearning.png" alt="ml image">
                 <h4>MACHINE LEARNING</h4>
                 <p>Employs machine learning algorithm to learn from the players' previous responses and presents problems to student at the right challenging level.
                 </p>
             </div>
             <div class="col-md-4 mt  wow slideInUp">
-                <img src="img/idea.png" alt="">
+                <img src="img/idea.png" alt="collaboration image">
                 <h4>COLLABORATION</h4>
                 <p>Incentivizes increased collaboration and consistent practice through innovative leaderboards and user activity feeds.
                 </p>
             </div>
             <div class="col-md-4 mt  wow slideInUp">
-                <img src="img/dataanalytics.png" alt="">
+                <img src="img/dataanalytics.png" alt="dataanalytics image">
                 <h4>DATA ANALYSIS</h4>
                 <p> Identifies areas where the student is struggling and prepares advanced diagnostic reports for parents / teachers.
                 </p>
@@ -132,9 +123,9 @@
 
     <div id="footer" class="wow slideInUp">
         <div class="container">
-            <div class="row"style="d-flex:row">
+            <div class="row">
                 <div class="col">
-                    <nav class="navbar navbar-expand">
+                    <nav class="navbar navbar-expand" style="justify-content:center">
                         <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link" href="#!">
@@ -153,24 +144,18 @@
                             </li>
                         </ul>
                     </nav>
-                    
-
+                    <p id='copyright'>Copyright &copy; 2019 PixelMath | Powered by CreatorsInk</p>
                 </div>
-                <p style="font-size:large; font-weight: bold;align-self: flex-end;padding-bottom: 10px;">&copy; 2019 PixelMath</p>
-               
             </div>
         </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- For animated the web content ( for slideInUp) -->
     <script src="js/wow.js"></script>
-
     <script>
         new WOW().init();
-
     </script>
+
     <!-- Mask Input JS -->
     <script src="js/jquery.samask-masker.js"></script>
     <script>

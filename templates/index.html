@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicons -->
-    <link href="img/logo.png" rel="icon">
+    <link href="static/images/logo.png" rel="icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700,900" rel="stylesheet">
@@ -20,7 +20,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-firestore.js"></script>
 
 
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='animate.css')}}">
     <!-- Bootstrap CSS File -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
@@ -30,7 +30,7 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 
     <!-- Main Stylesheet File -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet">
 
 </head>
 
@@ -40,7 +40,7 @@
             <div class="row">
                 <div class="col-md-6 d-flex flex-wrap align-content-center mt-5 mt-sm-0 wow zoomIn" style="padding:10px;">
                     <h3>
-                        <img src="img/logo.png" width="80px" height="auto"/>
+                        <img src="static/images/logo.png" width="80px" height="auto"/>
                         <span>PixelMath</span>
                         <p>
                           <small>Make maths practice as fun and addictive as Games</small>
@@ -57,15 +57,15 @@
                       Available for grade 1 to 12
                     </div>
                     <div class="col-md-10 px-0 pt-3" style="margin-top:-50px;">
-                      <a id="app-store-badge" href="#" role="button"><img width="45%" src="./img/app-store-badge.png"></a>
+                      <a id="app-store-badge" href="#" role="button"><img width="45%" src="static/images/app-store-badge.png"></a>
                       <a id="play-store-badge" href="https://play.google.com/store/apps/details?id=com.rvjeet.pixelmath&hl=en" role="button">
-                        <img width="50%" height="48%" src="./img/google-play-badge.png">
+                        <img width="50%" height="48%" src="static/images/google-play-badge.png">
                       </a>
                     </div>
                 </div>
 
                 <div class="col-md-6 d-flex justify-content-center wow zoomIn" style="padding:10px">
-                    <img src="img/app-cell2.png"  width="65%" height= "100%">
+                    <img src="static/images/app-cell2.png"  width="65%" height= "100%">
                 </div>
 
             </div>
@@ -78,35 +78,35 @@
     <div class="container my-5 pb-5 features">
         <div class="row text-center">
             <div class="col-md-4 mt  wow slideInUp">
-                <img src="img/gamedesign.png" alt="game design image">
+                <img src="static/images/gamedesign.png" alt="game design image">
                 <h4>GAME DESIGN</h4>
                 <p> Uses elements from game design like - goals, adaptivity, balance and feedback mechanism to make maths practice fun and engaging.</p>
             </div>
             <div class="col-md-4 mt  wow slideInUp">
-                <img src="img/positive.png" alt="positive psychology image">
+                <img src="static/images/positive.png" alt="positive psychology image">
                 <h4>POSITIVE PSYCHOLOGY</h4>
                 <p>Incorporates elements of autonomy, competence and relatedness from positive psychology to keep players motivated and induce "flow" during maths practice.
                 </p>
             </div>
             <div class="col-md-4 mt  wow slideInUp">
-                <img src="img/learningscience.png" alt="learning science image">
+                <img src="static/images/learningscience.png" alt="learning science image">
                 <h4>LEARNING SCIENCES</h4>
                 <p>Helps students calibrate their efforts during individual practice sessions by boosting their metacognitive abilities.</p>
             </div>
             <div class="col-md-4 mt  wow slideInUp">
-                <img src="img/machinelearning.png" alt="ml image">
+                <img src="static/images/machinelearning.png" alt="ml image">
                 <h4>MACHINE LEARNING</h4>
                 <p>Employs machine learning algorithm to learn from the players' previous responses and presents problems to student at the right challenging level.
                 </p>
             </div>
             <div class="col-md-4 mt  wow slideInUp">
-                <img src="img/idea.png" alt="collaboration image">
+                <img src="static/images/idea.png" alt="collaboration image">
                 <h4>COLLABORATION</h4>
                 <p>Incentivizes increased collaboration and consistent practice through innovative leaderboards and user activity feeds.
                 </p>
             </div>
             <div class="col-md-4 mt  wow slideInUp">
-                <img src="img/dataanalytics.png" alt="dataanalytics image">
+                <img src="static/images/dataanalytics.png" alt="dataanalytics image">
                 <h4>DATA ANALYSIS</h4>
                 <p> Identifies areas where the student is struggling and prepares advanced diagnostic reports for parents / teachers.
                 </p>
@@ -147,13 +147,13 @@
     </div>
 
     <!-- For animated the web content ( for slideInUp) -->
-    <script src="js/wow.js"></script>
+    <script src="{{url_for('static', filename='wow.js')}}"></script>
     <script>
         new WOW().init();
     </script>
 
     <!-- Mask Input JS -->
-    <script src="js/jquery.samask-masker.js"></script>
+    <script src="{{url_for('static', filename='jquery.samask-masker.js')}}"></script>
     <script>
         $(function() {
             $.samaskHtml();
@@ -163,7 +163,7 @@
     </script>
 
     <!-- Save the contact details -->
-    <script src="js/saveContact.js"></script>
+    <script src="{{url_for('static', filename='save_contact.js')}}"></script>
 
 </body>
 

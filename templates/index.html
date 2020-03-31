@@ -1,44 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>PixelMath</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <!-- Favicons -->
-    <link href="static/images/logo.png" rel="icon">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700,900" rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
-
-    <!--connecting to firebase-->
-    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-firestore.js"></script>
-
-
-    <link rel="stylesheet" href="{{url_for('static', filename='animate.css')}}">
-    <!-- Bootstrap CSS File -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
-    <!-- Sweet Alert -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-    <!-- jquery CDN -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-
-    <!-- Main Stylesheet File -->
-    <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet">
-
-</head>
-
-<body>
+{% extends "main.jinja" %}
+{% block page %}
     <div id="header">
         <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #eaf8fe">
+              <div style="right: 2em;position: absolute;">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('blog')}}" style="color: #607D8B;">
+                      <span style="font-size: 1.5em;">Blog</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
             <div class="row">
-                <div class="col-md-6 d-flex flex-wrap align-content-center mt-5 mt-sm-0 wow zoomIn" style="padding:10px;">
+                <!-- <div class="col-md-12 d-flex flex-wrap fixed-top text-right" style="background-color: #eaf8fe; padding: 2em;">
+                  Blog
+                </div> -->
+                <div class="col-md-6 d-flex flex-wrap align-content-center wow zoomIn" style="padding:10px; margin-top: 7em;">
                     <h3>
                         <img src="static/images/logo.png" width="80px" height="auto"/>
                         <span>PixelMath</span>
@@ -64,8 +43,8 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 d-flex justify-content-center wow zoomIn" style="padding:10px">
-                    <img src="static/images/app-cell2.png"  width="65%" height= "100%">
+                <div class="col-md-6 d-flex justify-content-center wow zoomIn" style="padding:10px; margin-top: 6vh;">
+                    <img src="static/images/app-cell2.png"  width="90%" height= "100%">
                 </div>
 
             </div>
@@ -117,54 +96,5 @@
 
     <!--/container -->
 
-    <div id="footer" class="wow slideInUp">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <nav class="navbar navbar-expand" style="justify-content:center">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#!">
-                                    <i class="fab fa-facebook" style="font-size:40px"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://twitter.com/PixelMath">
-                                    <i class="fab fa-twitter" style="font-size:40px"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://www.instagram.com/pixel_math/">
-                                    <i class="fab fa-instagram" style="font-size:40px"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <p id='footer-copyright'>Copyright &copy; 2019 PixelMath | Powered by CreatorsInk</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- For animated the web content ( for slideInUp) -->
-    <script src="{{url_for('static', filename='wow.js')}}"></script>
-    <script>
-        new WOW().init();
-    </script>
-
-    <!-- Mask Input JS -->
-    <script src="{{url_for('static', filename='jquery.samask-masker.js')}}"></script>
-    <script>
-        $(function() {
-            $.samaskHtml();
-            $('.mobile').samask("00000000000000");
-        });
-
-    </script>
-
-    <!-- Save the contact details -->
-    <script src="{{url_for('static', filename='save_contact.js')}}"></script>
-
-</body>
-
-</html>
+    
+{% endblock %}

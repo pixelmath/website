@@ -9,5 +9,9 @@ def index():
 def blog():
     return render_template("/blog.html")
 
+@app.route('/scanner')
+def scanner():
+    return render_template("/scanner.html")
+
 if __name__ == "__main__":
     app.run()

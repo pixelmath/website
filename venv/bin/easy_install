@@ -1,4 +1,5 @@
-#!/Users/apoorvelous/pixelmath/website/venv/bin/python3.8
+#!/home/ubuntu/website/venv/bin/python3
+
 # -*- coding: utf-8 -*-
 import re
 import sys

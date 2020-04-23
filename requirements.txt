@@ -59,7 +59,7 @@ dask==0.17.5
 datashape==0.5.4
 decorator==4.3.0
 distributed==1.21.8
-Django==2.0.2
+Django==2.2.10
 django-cors-headers==2.1.0
 django-filter==2.0.0
 django-filters==0.2.1

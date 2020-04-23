@@ -1,5 +1,43 @@
 {% extends "main.jinja" %}
 {% block page %}
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/js/utils.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.0/css/intlTelInput.css"> -->
+    <!-- <style>
+      .intl-tel-input {
+        display: table-cell;
+      }
+      .intl-tel-input .selected-flag {
+        z-index: 4;
+      }
+      .intl-tel-input .country-list {
+        z-index: 5;
+      }
+      .input-group .intl-tel-input .form-control {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 0;
+      }
+    </style> -->
+    <!-- <script>
+      // $(function(){
+      //   var input = document.querySelector("#telCode");
+      //   window.intlTelInput(input, {
+      //       preferredCountries: ['in'],
+      //       separateDialCode: true
+      //   });
+      // })
+      $(document).ready(function(){
+        var input = document.querySelector("#telCode");
+        var iti = intlTelInput(input, {
+          utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.0/js/intlTelInput-jquery.js",
+          default: 'in'
+        });
+
+        // store the instance variable so we can access it in the console e.g. window.iti.getNumber()
+        window.iti = iti;
+      })
+    </script> -->
     <div id="header">
         <div class="container">
           <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #eaf8fe">
@@ -25,12 +63,37 @@
                           <small>Make maths practice as fun and addictive as Games</small>
                         </p>
                     </h3>
-
+                    <div class="col-md-5 px-0 pt-3">
+                        <input id ="childName" type="text" name="childName" class="subscribe-input mobile" placeholder="Child's Name" required>
+                    </div>
+                    <div class="col-md-5 px-0 pt-3">
+                        <div class="row">
+                          <div class="col-md-11">
+                            <!-- <select id="childGrade" name="childGrade" class="subscribe-input mobile">
+                              <option value="">Grade</option>
+                              <option value="3">Grade 3</option>
+                              <option value="4">Grade 4</option>
+                              <option value="5">Grade 5</option>
+                              <option value="6">Grade 6</option>
+                              <option value="7">Grade 7</option>
+                              <option value="8">Grade 8</option>
+                              <option value="9">Grade 9</option>
+                              <option value="10">Grade 10</option>
+                              <option value="other">Other</option>
+                            </select> -->
+                            <input id ="childGrade" type="text" name="childGrade" class="subscribe-input mobile" placeholder="Grade" required>
+                          </div>
+                        </div>
+                    </div>
                     <div class="col-md-10 px-0 pt-3">
-                        <form role="form" action="#" method="post" enctype="plain" id ="contactForm">
-                            <input id ="telNumber" type="tel" name="tel"  value ="+91-" maxLength="16" class="subscribe-input mobile" placeholder="Enter Phone Number"  required>
-                            <button class='btn btn-green2 subscribe-submit' type="submit" id = "submit">Free 7 day Trial</button>
-                        </form>
+                        <!-- <form role="form" action="#" method="post" enctype="plain"id ="contactForm"> -->
+                            <input type="tel" id="telCode" class="subscribe-input mobile" required style="width: 13vh; position: absolute; padding-left: 3vh; padding-right: 0;" value="+91">
+                            <input id ="telNumber" type="tel" name="tel" maxLength="16" class="subscribe-input mobile" placeholder="Phone Number" style="padding-left: 15vh;"  required>
+                            <!-- <button class='btn btn-green2 subscribe-submit' type="submit" id = "submit">Free 7 day Trial</button> -->
+                        <!-- </form> -->
+                    </div>
+                    <div class="col-md-10 px-0 pt-3 text-center">
+                      <button class='btn btn-green2' type="submit" id="submit">Free 7 day Trial</button>
                     </div>
                     <div class="col-md-10 px-0 pt-3" style="text-align:center;font-size:25px;margin-top:30px;">
                       Available for grade 1 to 12
@@ -44,7 +107,7 @@
                 </div>
 
                 <div class="col-md-6 d-flex justify-content-center wow zoomIn" style="padding:10px; margin-top: 6vh;">
-                    <img src="static/images/app-cell2.png"  width="90%" height= "100%">
+                    <img src="static/images/app-cell2.png"  width="100%" height= "100%">
                 </div>
 
             </div>
@@ -96,5 +159,5 @@
 
     <!--/container -->
 
-    
+
 {% endblock %}

@@ -13,7 +13,7 @@ def index():
     if email:
         already_logged = VisitWebsiteLog.query.filter_by(email_id=email.id, from_email=from_email).first()
         if not already_logged:
-            VisitWebsiteLog.log_visit(email.id)
+            VisitWebsiteLog.log_visit(email.id, from_email)
     return render_template("/index.html")
 
 @main.route('/blog')

@@ -16,13 +16,15 @@ class OpenEmailLog(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     guid = db.Column(db.String, unique=True, nullable=False)
     opened_at = db.Column(db.DateTime, default=datetime.datetime.utcnow)
+    from_email = db.Column(db.String, nullable=False)
     email_id = db.Column(db.Integer, db.ForeignKey('email.id'), nullable=False)
 
     @staticmethod
-    def log_open(email_id):
+    def log_open(email_id, from_email):
         open_email_log = OpenEmailLog(
                                             guid = str(uuid.uuid4()),
-                                            email_id = email_id
+                                            email_id = email_id,
+                                            from_email = from_email
                                     )
         db.session.add(open_email_log)
         db.session.commit()
@@ -32,13 +34,15 @@ class VisitWebsiteLog(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     guid = db.Column(db.String, unique=True, nullable=False)
     visited_at = db.Column(db.DateTime, default=datetime.datetime.utcnow)
+    from_email = db.Column(db.String, nullable=False)
     email_id = db.Column(db.Integer, db.ForeignKey('email.id'), nullable=False)
 
     @staticmethod
-    def log_visit(email_id):
+    def log_visit(email_id, from_email):
         visit_website_log = VisitWebsiteLog(
                                                 guid = str(uuid.uuid4()),
-                                                email_id = email_id
+                                                email_id = email_id,
+                                                from_email = from_email
                                         )
         db.session.add(visit_website_log)
         db.session.commit()

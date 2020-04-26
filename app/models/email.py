@@ -16,7 +16,7 @@ class OpenEmailLog(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     guid = db.Column(db.String, unique=True, nullable=False)
     opened_at = db.Column(db.DateTime, default=datetime.datetime.utcnow)
-    from_email = db.Column(db.String, nullable=False)
+    from_email = db.Column(db.String)
     email_id = db.Column(db.Integer, db.ForeignKey('email.id'), nullable=False)
 
     @staticmethod
@@ -34,7 +34,7 @@ class VisitWebsiteLog(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     guid = db.Column(db.String, unique=True, nullable=False)
     visited_at = db.Column(db.DateTime, default=datetime.datetime.utcnow)
-    from_email = db.Column(db.String, nullable=False)
+    from_email = db.Column(db.String)
     email_id = db.Column(db.Integer, db.ForeignKey('email.id'), nullable=False)
 
     @staticmethod

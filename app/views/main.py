@@ -8,7 +8,7 @@ main = Blueprint('main', __name__, url_prefix="/")
 @main.route('/')
 def index():
     email_guid = request.args.get("guid")
-    from_email = request.args.get("from_email")
+    from_email = request.args.get("email")
     email = Email.query.filter_by(guid=email_guid).first()
     if email:
         already_logged = VisitWebsiteLog.query.filter_by(email_id=email.id, from_email=from_email).first()

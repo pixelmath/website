@@ -46,7 +46,7 @@ campaign_6_dict = dict(
                         name = "Email 2 ~ 2nd May ~ 8:00pm"
                 )
 campaign_6 = Email(**campaign_6_dict)
-db.session.add(campaign_3)
+db.session.add(campaign_6)
 db.session.commit()
 
 campaign_7_dict = dict(

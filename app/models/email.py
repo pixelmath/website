@@ -8,6 +8,7 @@ class Email(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     guid = db.Column(db.String, unique=True, nullable=False)
     name = db.Column(db.String, nullable=False)
+    signups = db.relationship('Signup', lazy=True, backref="email_campaign")
     open_email = db.relationship('OpenEmailLog', lazy=True, backref="email")
     visit_website = db.relationship('VisitWebsiteLog', lazy=True, backref="email")
 

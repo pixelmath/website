@@ -42,6 +42,7 @@
       $(function(){
         $("#submit").click(function(){
           let data = {
+            email_campaign: "{{email_guid}}",
             name: $("#childName").val(),
             grade: $("#childGrade").val(),
             country_code: $("#telCode").val(),

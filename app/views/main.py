@@ -11,7 +11,7 @@ def index():
     email = Email.query.filter_by(guid=email_guid).first()
     if email:
         VisitWebsiteLog.log_visit(email.id)
-    return render_template("/index.html")
+    return render_template("/index.html", email_guid=email_guid)
 
 @main.route('/blog')
 def blog():

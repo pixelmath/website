@@ -21,3 +21,5 @@ migrations
 
 json/**
 json
+
+.DS_Store

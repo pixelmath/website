@@ -19,6 +19,7 @@ class Signup(db.Model):
     @staticmethod
     def save(**kwargs):
         email_campaign = Email.query.filter_by(guid=kwargs.get("email_campaign")).first() or ""
+        email_campaign_id = None
         if email_campaign:
             email_campaign_id = email_campaign.id
         signup = Signup(

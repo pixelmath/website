@@ -6,6 +6,11 @@ from app.models.contest import Contest
 
 api = Blueprint('api', __name__, url_prefix="/api")
 
+@api.route('/signup', methods=["POST"])
+def signup():
+    signup = Signup.save(**request.json)
+    return jsonify({}), 201
+
 @api.route("/contest-registration", methods=["POST"])
 def contest_registration():
     name = request.json.get("name")

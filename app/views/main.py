@@ -7,11 +7,7 @@ main = Blueprint('main', __name__, url_prefix="/")
 
 @main.route('/')
 def index():
-    email_guid = request.args.get("guid")
-    email = Email.query.filter_by(guid=email_guid).first()
-    if email:
-        VisitWebsiteLog.log_visit(email.id)
-    return render_template("/index.html", email_guid=email_guid)
+    return render_template("/index.html")
 
 @main.route('/blog')
 def blog():

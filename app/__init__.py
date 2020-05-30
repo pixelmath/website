@@ -19,8 +19,8 @@ def create_app(script_info=None):
   migrate.init_app(app, db)
   bcrypt.init_app(app)
 
-  from app.views.main import main
-  app.register_blueprint(main)
+  from app import views
+  app.register_blueprint(views.main)
 
   from app.api.api import api
   app.register_blueprint(api)

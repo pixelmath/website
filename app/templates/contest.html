@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164473585-1"></script>
+      <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-164473585-1');
+      </script>
+      <meta charset="utf-8">
+      <title>PixelMath</title>
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <meta content="" name="keywords">
+      <meta content="" name="description">
+
+      <link href="static/images/logo.png" rel="icon">
+
+      <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+      <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
+
+      <link rel="stylesheet" href="{{url_for('static', filename='animate.css')}}">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+      <!-- Sweet Alert -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.css">
+      <!-- jquery CDN -->
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+      <!-- Main Stylesheet File -->
+      <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet">
+
+      <style>
+        body {
+          min-height: 100vh;
+          background-color: #f0f1f3;
+          font-family: 'Roboto', sans-serif;
+        }
+        select {
+          height: 44px;
+          background: white;
+        }
+        input[type="text"],
+        input[type="tel"],
+        select {
+          width: 100%;
+          border: 2px solid #aaa;
+          border-radius: 4px;
+          margin: 8px 0;
+          outline: none;
+          padding: 8px;
+          box-sizing: border-box;
+          transition: 0.3s;
+        }
+        input[type="text"]:focus {
+          border-color: dodgerBlue;
+          box-shadow: 0 0 8px 0 dodgerBlue;
+        }
+        .inputWithIcon input[type="text"] {
+          padding-left: 40px;
+        }
+        .inputWithIcon {
+          position: relative;
+        }
+        .inputWithIcon i {
+          position: absolute;
+          left: 0;
+          top: 8px;
+          padding: 14px 14px;
+          color: #aaa;
+          transition: 0.3s;
+        }
+        .inputWithIcon input[type="text"]:focus + i {
+          color: dodgerBlue;
+        }
+        .inputWithIcon.inputIconBg i {
+          background-color: #aaa;
+          color: #fff;
+          padding: 9px 4px;
+          border-radius: 4px 0 0 4px;
+        }
+        .inputWithIcon.inputIconBg input[type="text"]:focus + i {
+          color: #fff;
+          background-color: dodgerBlue;
+        }
+        #contest_form_container {
+          background-color: #efeeee;
+          padding: 1em;
+          border-radius: 1em;
+        }
+        a {
+          text-decoration: none;
+          color: black;
+        }
+        .submit-button {
+          width: 100%;
+          background-color: #5dca88;
+          color: white;
+          padding: 1em;
+          border-radius: 1em;
+        }
+      </style>
+  </head>
+  <body>
+    <div class="wow zoomIn">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 text-center bg-white p-2">
+          <a href="/">
+            <img src="static/images/logo.png" width="30em" height="auto"/>
+            <span style="font-size: 1em;"><b>PixelMath</b></span>
+          </a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-8 col-lg-8">
+            <img src="static/images/contest.png" width="80%" height="auto"/>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-4 align-self-center pt-5 pb-5">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                <div class="text-left pl-5">
+                  <h4 style="color: #EF7064;">Online</h4>
+                </div>
+                <h2 style="color: #EF7064;">MATH CONTEST</h2>
+              </div>
+            </div>
+            <div class="row" id="contest_form_container">
+              <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                <h5>Register for Contest</h5>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="inputWithIcon">
+                  <input type="text" placeholder="Name" id="name">
+                  <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="inputWithIcon">
+                  <input type="text" placeholder="Email" id="email">
+                  <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="inputWithIcon">
+                  <input type="text" value="+91" placeholder="Phone number" id="mobile_number">
+                  <i class="fa fa-mobile fa-lg fa-fw" style="padding-left: 18px;" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-12">
+                <select class="inputWithIcon" id="grade">
+                  <option value="">Grade</option>
+                  <option value="3">Grade 3</option>
+                  <option value="4">Grade 4</option>
+                  <option value="5">Grade 5</option>
+                  <option value="6">Grade 6</option>
+                  <option value="7">Grade 7</option>
+                  <option value="8">Grade 8</option>
+                  <option value="9">Grade 9</option>
+                  <option value="10">Grade 10</option>
+                </select>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-12 mt-3 text-center">
+                <button class='submit-button' type="submit" id="submit"><b>Submit</b></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="{{url_for('static', filename='wow.js')}}"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="{{url_for('static', filename='jquery.samask-masker.js')}}"></script>
+    <script>
+        $(function() {
+            $.samaskHtml();
+            $('.mobile').samask("00000000000000");
+
+            $("#submit").click(function(){
+              let data = {
+                            name: $("#name").val(),
+                            email: $("#email").val(),
+                            mobile_number: $("#mobile_number").val(),
+                            grade: $("#grade").val()
+                        }
+              $.ajax({
+                url: "{{url_for('api.contest_registration')}}",
+                type: 'post',
+                data: JSON.stringify(data),
+                dataType: 'json',
+                contentType: 'application/json',
+                success: function (result) {
+                  Swal.fire(
+                   'Awesome!',
+                   "You've successfully registered for the contest!",
+                   'success'
+                  )
+                },
+                error: function (result) {
+                  Swal.fire(
+                   'Uh Oh!',
+                   result.responseJSON.message,
+                   'error'
+                  )
+                },
+                complete:function(data){
+                  $('.main-container').removeClass('blur');
+                  $(':button').prop('disabled', false);
+                  $("#loader").hide();
+                }
+              });
+            })
+        });
+    </script>
+  </body>
+</html>

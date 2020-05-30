@@ -20,3 +20,7 @@ def blog():
 @main.route('/scanner')
 def scanner():
     return render_template("/scanner.html")
+
+@main.route("/contest")
+def contest():
+    return render_template("/contest.html")

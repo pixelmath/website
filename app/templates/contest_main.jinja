@@ -33,6 +33,8 @@
       <!-- Main Stylesheet File -->
       <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet">
 
+      {% block head %}{% endblock %}
+
       <style>
         html,body {
           width: 100%;

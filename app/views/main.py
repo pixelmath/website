@@ -20,3 +20,7 @@ def scanner():
 @main.route("/contest")
 def contest():
     return render_template("/contest.html")
+
+@main.route("/confirmation")
+def confirmation():
+    return render_template("/confirmation.html")

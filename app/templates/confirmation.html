@@ -1,0 +1,58 @@
+{% extends "contest_main.jinja" %}
+{% block page %}
+
+<style>
+  #white_container {
+    background: #fff;
+    border-radius: 1em;
+  }
+  @media (max-width: 480px) {
+    .app-store-container {
+        margin-top: 1em;
+    }
+  }
+</style>
+
+<div class="container text-center" id="white_container">
+  <div class="row mt-5">
+    <div class="col-sm-12 col-md-12 col-lg-12 mt-3">
+      <img src="/static/images/like.png" />
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2 text-justify">
+      <h4>You have successfully registered for the PixelMath Online Math Contest! You will receive details of the event one week prior to the event date.</h4>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2 text-justify">
+      <h4>To Practice math questions for the contest, you can download and use our PixelMath App. PixelMath App is available on both PlayStore and App Store.</h4>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-sm-12 col-md-6 col-lg-3 offset-lg-3 text-right-lg">
+      <a id="play-store-badge" href="https://play.google.com/store/apps/details?id=com.rvjeet.pixelmath&hl=en" role="button">
+        <img width="80%" src="static/images/google-play-badge.png">
+      </a>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-3 text-left-lg app-store-container">
+      <a id="app-store-badge" href="https://apps.apple.com/in/app/pixelmath/id1507433163" role="button">
+        <img width="80%" height="90%" src="static/images/app-store-badge.png">
+      </a>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2 text-justify">
+      <h4>Follow and like our Facebook page to stay updated with the event. All the Best!</h4>
+    </div>
+  </div>
+  <div class="row mb-5 mt-5">
+    <div class="col-sm-12 col-md-12 col-lg-2 offset-lg-5 text-center mb-5">
+      <a href="https://www.facebook.com/PixelmathOfficial/" target="blank">
+        <img width="100%" src="static/images/follow_on_fb.png">
+      </a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

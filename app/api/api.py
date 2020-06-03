@@ -3,6 +3,7 @@ from app.models.signup import Signup
 from app import db
 from app.models.email import Email, OpenEmailLog
 from app.models.contest import Contest
+import os
 
 api = Blueprint('api', __name__, url_prefix="/api")
 
@@ -24,3 +25,17 @@ def contest_registration():
         }), 400
     contest = Contest.save(name, email, mobile_number, grade)
     return jsonify({}), 201
+
+@api.route("/get-contest-entries")
+def get_contest_entries():
+    unique_id = request.args.get("uid")
+    if unique_id != os.environ.get("unique_id"):
+        return jsonify({
+            "message": "Invalid Unique ID",
+            "status": "error"
+        }), 400
+    return_json = [contest.to_json() for contest in Contest.query.all()]
+    return jsonify({
+                        "data": return_json,
+                        "status": "success"
+                }), 200

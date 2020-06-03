@@ -12,6 +12,17 @@ class Contest(db.Model):
     grade = db.Column(db.String, nullable=False)
     registered_at = db.Column(db.DateTime, default=datetime.datetime.utcnow)
 
+    def to_json(self):
+        return {
+                    "id": self.id,
+                    "guid": self.guid,
+                    "name": self.name,
+                    "email": self.email,
+                    "mobile_number": self.mobile_number,
+                    "grade": self.grade,
+                    "registered_at": self.registered_at
+            }
+
     @staticmethod
     def save(name, email, mobile_number, grade):
         contest = Contest(

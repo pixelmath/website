@@ -3,6 +3,7 @@ from app.models.signup import Signup
 from app import db
 from app.models.email import Email, OpenEmailLog
 from app.models.contest import Contest
+from app.utils.contest_util import validate_email
 import os
 
 api = Blueprint('api', __name__, url_prefix="/api")
@@ -21,6 +22,11 @@ def contest_registration():
     if not all((name, email, mobile_number, grade)):
         return jsonify({
             "message": "All Fields are required!",
+            "status": "error"
+        }), 400
+    if not validate_email(email):
+        return jsonify({
+            "message": "Invalid Email Address!",
             "status": "error"
         }), 400
     contest = Contest.save(name, email, mobile_number, grade)

@@ -41,11 +41,11 @@
     })
     $("#custom_share_whatsapp").click(function(){
       if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-       let text = `Checkout this new app PixelMath and participate in the contest!%0a%0a`
+       let text = `Participate in a gameful online math contest on 15th August and explore how problem-solving in maths can be a fun, engaging and collaborative experience.%0a%0aNo registration costs!%0a%0a`
        let whatsapp_url = `https://api.whatsapp.com/send?text=${text}` + encodeURIComponent("http://pixelmath.socialshare.top/BnOG9R ");
        window.open(whatsapp_url,"_blank");
      } else {
-       let text = `Checkout this new app PixelMath and participate in the contest!%0a%0a`
+       let text = `Participate in a gameful online math contest on 15th August and explore how problem-solving in maths can be a fun, engaging and collaborative experience.%0a%0aNo registration costs!%0a%0a`
        let whatsapp_url = `https://web.whatsapp.com/send?l=en&text=${text}` + encodeURIComponent("http://pixelmath.socialshare.top/BnOG9R ");
        window.open(whatsapp_url,"_blank");
      }

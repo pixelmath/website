@@ -24,3 +24,7 @@ def contest():
 @main.route("/confirmation")
 def confirmation():
     return render_template("/confirmation.html")
+
+@main.route("/privacy")
+def privacy():
+    return render_template("/privacy.html")

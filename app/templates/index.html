@@ -38,7 +38,7 @@
      window.iti = iti;
    })
    </script> -->
-<style>
+<!-- <style>
    #customers-testimonials .box {
    opacity: .2;
    transform: scale3d(0.8, 0.8, 1);
@@ -60,23 +60,57 @@
      width: 90%;
      min-height: 100%;
    }
+</style> -->
+<style>
+blockquote {
+position: relative;
+font-family: inherit;
+font-style: italic;
+font-weight: normal;
+font-size: 1em;
+padding-top: 1em;
+padding-left: 1em;
+line-height: 2
+}
+
+blockquote::before {
+position: absolute;
+content: "‘";
+color: #418AD1;
+font-size: 15em;
+opacity: 0.2;
+top: -0.5em;
+left: -0.05em;
+right: unset
+}
+
+blockquote::after {
+position: absolute;
+content: "‘";
+color: #418AD1;
+font-size: 15em;
+opacity: 0.5;
+top: -0.5em;
+left: -0.25em;
+right: unset
+}
 </style>
 <script>
-   $(document).ready(function(){
-     $('#customers-testimonials').owlCarousel({
-               loop: true,
-               center: true,
-               autoplay: true,
-               autoplayTimeout: 5000,
-               autoplayHoverPause: true,
-               responsive: {
-                 100: { items: 1 },
-                 768: { items: 1 },
-                 1170: { items: 1.5 },
-   							1170: { items: 1.5 }
-               }
-           });
-   })
+   // $(document).ready(function(){
+   //   $('#customers-testimonials').owlCarousel({
+   //             loop: true,
+   //             center: true,
+   //             autoplay: true,
+   //             autoplayTimeout: 5000,
+   //             autoplayHoverPause: true,
+   //             responsive: {
+   //               100: { items: 1 },
+   //               768: { items: 1 },
+   //               1170: { items: 1.5 },
+   // 							1170: { items: 1.5 }
+   //             }
+   //         });
+   // })
     $(function(){
      $("#submit").click(function(){
        let data = {
@@ -132,6 +166,9 @@
                <p>
                   <small>Make maths practice as fun and addictive as Games</small>
                </p>
+               <p>
+                  <small>PixelMath is a math practice app which uses principles from Game Design, Learning Sciences and Positive Psychology to make math practice a fun and collaborative experience for students.</small>
+               </p>
             </h3>
             <!-- <div class="col-md-10 px-0 pt-3">
                <input id ="childName" type="text" name="childName" class="subscribe-input" placeholder="Kid's Name" required>
@@ -171,7 +208,7 @@
                Available for grade 3 to 10
             </div>
             <div class="col-md-10 px-0 mt-5">
-               <div class="hero-body">
+               <!-- <div class="hero-body">
                   <div class="container">
                      <div id="customers-testimonials" class="owl-carousel">
                         <div class="box mb-5">
@@ -236,7 +273,16 @@
                         </div>
                      </div>
                   </div>
-               </div>
+               </div> -->
+               <blockquote>
+                <b>For the first time, my daughter wants to stick to Maths for hours altogether! Thanks!</b>
+                <div class="text-right">
+                  <cite>~ Gunjan</cite>
+                </div>
+                <div class="text-right">
+                  <cite>Parent of Amie Grade 3 kid</cite>
+                </div>
+              </blockquote>
             </div>
          </div>
          <div class="col-md-6 d-flex justify-content-center wow zoomIn" style="padding:10px; margin-top: 6vh;">

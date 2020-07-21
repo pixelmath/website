@@ -19,11 +19,11 @@ def scanner():
 
 @main.route("/contest")
 def contest():
-    return render_template("/contest1.html")
+    return render_template("/contest.html")
 
 @main.route("/confirmation")
 def confirmation():
-    return render_template("/confirmation1.html")
+    return render_template("/confirmation.html")
 
 @main.route("/privacy")
 def privacy():

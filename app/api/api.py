@@ -3,6 +3,7 @@ from app.models.signup import Signup
 from app import db
 from app.models.email import Email, OpenEmailLog
 from app.models.contest import Contest
+from app.models.referral import Referral
 from app.utils.contest_util import validate_email
 from app.utils.mailer import send_mail
 import os
@@ -40,6 +41,26 @@ def contest_registration():
     #         "status": "Error"
     #     }), 400
 
+@api.route("/referral-registration", methods=["POST"])
+def referral_registration():
+    name = request.json.get("name")
+    email = request.json.get("email")
+    mobile_number = request.json.get("mobile_number")
+    grade = request.json.get("grade")
+    referral_id = request.json.get("referral_id")
+    if not all((name, email, mobile_number, grade)):
+        return jsonify({
+            "message": "All Fields are required!",
+            "status": "error"
+        }), 400
+    if not validate_email(email):
+        return jsonify({
+            "message": "Invalid Email Address!",
+            "status": "error"
+        }), 400
+    referral = Referral.save(name, email, mobile_number, grade, referral_id)
+    return jsonify({}), 201
+
 @api.route("/get-contest-entries")
 def get_contest_entries():
     unique_id = request.args.get("uid")
@@ -49,6 +70,25 @@ def get_contest_entries():
             "status": "error"
         }), 400
     return_json = [contest.to_json() for contest in Contest.query.all()]
+    return jsonify({
+                        "data": return_json,
+                        "status": "success"
+                }), 200
+
+@api.route("/get-referral-entries")
+def get_referral_entries():
+    unique_id = request.args.get("uid")
+    if unique_id != os.environ.get("unique_id"):
+        return jsonify({
+            "message": "Invalid Unique ID",
+            "status": "error"
+        }), 400
+    referral_id = request.args.get("referral_id")
+    if referral_id:
+        referrals = Referral.query.filter_by(referral_id=referral_id).all()
+    else:
+        referrals = Referral.query.all()
+    return_json = [referral.to_json() for referral in referrals]
     return jsonify({
                         "data": return_json,
                         "status": "success"

@@ -4,6 +4,7 @@ from app import db
 from app.models.email import Email, OpenEmailLog
 from app.models.contest import Contest
 from app.utils.contest_util import validate_email
+from app.utils.mailer import send_mail
 import os
 
 api = Blueprint('api', __name__, url_prefix="/api")
@@ -30,7 +31,14 @@ def contest_registration():
             "status": "error"
         }), 400
     contest = Contest.save(name, email, mobile_number, grade)
+    # try:
+    #     send_mail(email)
     return jsonify({}), 201
+    # except Exception as e:
+    #     return jsonify({
+    #         "message": "Please check if the email address is correct and try again.",
+    #         "status": "Error"
+    #     }), 400
 
 @api.route("/get-contest-entries")
 def get_contest_entries():

@@ -33,6 +33,15 @@
     left: -0.25em;
     right: unset
   }
+
+  .action-button-style {
+    background-color: #5dca88;
+    color: white;
+    font-weight: 900;
+    padding: 1em;
+    border-radius: 3em;
+    border: none;
+  }
 </style>
 <div id="header">
   <div class="container">
@@ -45,7 +54,7 @@
         <ul class="nav navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="{{url_for('main.contest')}}" style="color: #607D8B;">
-              <span style="font-size: 1.5em;">Contest</span>
+              <button class="action-button-style">Contest</button>
             </a>
           </li>
         </ul>

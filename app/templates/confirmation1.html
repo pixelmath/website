@@ -1,0 +1,104 @@
+{% extends "contest_main1.jinja" %}
+
+{% block page %}
+
+<style>
+    .main-confirmation-container {
+        background-image: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, .9)), url('static/images/contest_form_bg.png');
+        background-size: cover;
+        background-repeat: repeat;
+        min-height: 100vh;
+    }
+
+    .celebration-font {
+        font-family: 'Just Another Hand', cursive;
+    }
+
+    #share-fb:hover {
+        cursor: pointer;
+    }
+
+    #share-whatsapp:hover {
+        cursor: pointer;
+    }
+</style>
+
+<script>
+    $(function () {
+        $("#share-fb").click(function () {
+            var win = window.open("https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&u=http%3A%2F%2Fpixelmath.socialshare.top%2FBnOG9R&display=popup&ref=plugin&src=share_button", "_blank");
+            if (win) {
+                win.focus();
+            }
+        })
+        $("#share-whatsapp").click(function () {
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                let text = `🥇  http://pixelmath.postedthis.top/wbqZP3  🏅%0a%0aParticipate in a gameful online math contest on 15th August and explore how problem-solving in maths can be a fun, engaging and collaborative experience.%0a%0aNo registration costs!￼`
+                let whatsapp_url = `https://api.whatsapp.com/send?text=${text}`;
+                window.open(whatsapp_url, "_blank");
+            } else {
+                let text = `🥇  http://pixelmath.postedthis.top/wbqZP3  🏅%0a%0aParticipate in a gameful online math contest on 15th August and explore how problem-solving in maths can be a fun, engaging and collaborative experience.%0a%0aNo registration costs!￼`
+                let whatsapp_url = `https://web.whatsapp.com/send?l=en&text=${text}`;
+                window.open(whatsapp_url, "_blank");
+            }
+        })
+    })
+</script>
+
+<div class="main-confirmation-container">
+    <div class="row p-5">
+        <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+            <img src="/static/images/logo.png" width="50em" />
+            <span style="font-size: 1.5em; color: #0c293e;"><b>PixelMath</b></span>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+            <span id="share-fb"><i class="fab fa-facebook" style="font-size: 2em; color: #4064ac"></i></span>
+            <span id="share-whatsapp"><i class="fab fa-whatsapp" style="font-size: 2em; color: #62d467"></i></span>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+            <h1 class="celebration-font">TADAAM!</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+            <h1 style="font-weight: 900;">Successfully Registered for the Contest!</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+            <p>You have successfully registered for the PixelMath Online Math Contest!</p>
+            <p style="margin-top: -0.5em;">You will receive details of the event one week prior to the event date.</p>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-sm-12 col-md-12 col-lg-12 text-center mt-5">
+            <h4>Download PixelMath App to practice contest questions</h4>
+        </div>
+    </div>
+    <!-- <div class="row mt-3">
+        <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+            <button class="share-button-fb" id="custom_share_fb"><i style="color: white;" class="fab fa-facebook"></i>
+                Share</button>
+            <button class="share-button-whatsapp" id="custom_share_whatsapp"><i style="color: white;"
+                    class="fab fa-whatsapp"></i> Share</button>
+        </div>
+    </div> -->
+    <div class="row mt-2">
+        <div class="col-sm-12 col-md-6 col-lg-3 offset-lg-3 text-lg-right text-center p-1">
+            <a id="play-store-badge" href="https://play.google.com/store/apps/details?id=com.rvjeet.pixelmath&hl=en"
+                role="button" target="blank">
+                <img width="80%" src="static/images/google-play-badge.png">
+            </a>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 text-lg-left app-store-container text-center p-1">
+            <a id="app-store-badge" href="https://apps.apple.com/in/app/pixelmath/id1507433163" role="button"
+                target="blank">
+                <img width="80%" height="90%" src="static/images/app-store-badge.png">
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

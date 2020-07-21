@@ -18,7 +18,8 @@
 
       <link href="static/images/logo.png" rel="icon">
 
-      <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;900&display=swap" rel="stylesheet">
       <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
 
       <link rel="stylesheet" href="{{url_for('static', filename='animate.css')}}">
@@ -31,7 +32,7 @@
       <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 
       <!-- Main Stylesheet File -->
-      <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet">
+      {# <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet"> #}
 
       {% block head %}{% endblock %}
 
@@ -48,8 +49,7 @@
           margin: 0px;
           padding: 0px;
           overflow-x: hidden;
-          background-color: #f0f1f3;
-          font-family: 'Roboto', sans-serif;
+          font-family: 'M PLUS Rounded 1c', sans-serif;
         }
         a {
           text-decoration: none;
@@ -61,14 +61,6 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KT4CSPJ"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="wow zoomIn">
-      <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12 text-center bg-white pt-2 pb-2">
-          <a href="/">
-            <img src="static/images/logo.png" width="30em" height="auto"/>
-            <span style="font-size: 1em;"><b>PixelMath</b></span>
-          </a>
-        </div>
-      </div>
       {% block page %}{% endblock %}
     </div>
     <script src="{{url_for('static', filename='wow.js')}}"></script>
